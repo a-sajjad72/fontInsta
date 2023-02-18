@@ -1,6 +1,6 @@
 To use this PowerShell script, follow the instructions below:
 
-1. Download the script from [here]()
+1. Download the script from [here](https://github.com/a-sajjad72/fontInsta/archive/refs/heads/master.zip)
 2. Copy the script file (FontInsta.ps1) to same folder where the archive file is placed.
 3. `Shift+Right-Click` on the empty area of the folder and select ***Open PowerShell window here*** from the context menu.
 4. Run the script with the command: `.\FontInsta.ps1 -ArchiveName <name of font archive>`
