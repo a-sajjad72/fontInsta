@@ -37,7 +37,7 @@ This will only install the fonts from the root directory of "Roboto.zip"
 
 This will only install the fonts from the "Roboto" and "Poppins" subdirectories.
 
-NOTE: when using `-SubDir` the fonts in root directory are ignored. To include files from the root directory use the -InstallFromRoot option.
+NOTE: when using `-SubDir` the fonts in root directory are ignored. To include files from the root directory use the `-InstallFromRoot` option.
 
     .\FontInsta.ps1 -ArchiveName myFonts.zip -Subdir "Roboto","Poppins"
 
