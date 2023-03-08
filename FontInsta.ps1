@@ -11,15 +11,17 @@ function Show-Help {
 Install fonts from the specified archive file into the Windows Fonts folder.
 Usage: FontInsta.ps1 -ArchiveName <name> [-SubDir <sub_dir_1>,<sub_dir_2>,...] [-InstallFromRoot] [-All] [-Help]
 Parameters:
--ArchiveName        The name of the font archive to install.
-                    (required) 
--SubDir     An array of subdirectories to install
+-ArchiveName        The name of the font archive to install
+                    (required). You can also specify the path
+                    with archive file.
+-SubDir             An array of subdirectories to install
                     fonts from (optional). -Subdir
                     should be separated by commas and enclosed
                     within double quotes.
 -InstallFromRoot    A switch indicating whether to install
                     fonts from the root directory of the
-                    archive (optional, default is off).
+                    archive (optional, default is off). Comes
+                    in handy while using -SubDir option.
 -All                A switch indicating whether to install
                     files from subdirectories.
 -Help               Display the help message.
@@ -46,7 +48,10 @@ if ($ArchiveName -eq "") {
     return
 }
 
-$FontsFolder = "Font$([System.IO.Path]::GetFileNameWithoutExtension($ArchiveName))"
+$path = Split-Path -Path $ArchiveName -Parent
+$filename = Split-Path -Path $ArchiveName -Leaf
+
+$FontsFolder = "Font$([System.IO.Path]::GetFileNameWithoutExtension($filename))"
 
 Expand-Archive -Path $ArchiveName -DestinationPath $FontsFolder -Force
 
