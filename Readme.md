@@ -15,17 +15,15 @@ Use the `-All` parameter to include fonts from subdirectories within the specifi
 ## USAGE:
     .\FontInsta.ps1 -ArchiveName <[path]\name> [-SubDir <sub_dir_1>,<sub_dir_2>,...] [-InstallFromRoot] [-All] [-Help]
 ## OPTIONS:
-    -ArchiveName        The name of the font archive to install
-                        (required). You can also specify the path
+    -ArchiveName        (required) The name of the font archive to install.
+                        You can also specify the path
                         with archive file.
-    -SubDir             An array of subdirectories to install
-                        fonts from (optional). -Subdir
-                        should be separated by commas and enclosed
-                        within double quotes.
-    -InstallFromRoot    A switch indicating whether to install
-                        fonts from the root directory of the
-                        archive (optional, default is off). Comes
-                        in handy while using -SubDir option.
+    -SubDir             (optional) An array of subdirectories to install
+                        fonts from. Directories names should be separated by
+                        commas and enclosed within double quotes.
+    -InstallFromRoot    (optional) A switch indicating whether to install
+                        fonts from the root directory of the archive (default is
+                        off). Comes in handy while using -SubDir option.
     -All                A switch indicating whether to install
                         files from subdirectories.
     -Help               Display the help message.
