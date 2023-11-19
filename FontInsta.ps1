@@ -31,13 +31,13 @@ Parameters:
 
 function installFonts {
     foreach ($font in $allFonts) {
-        if (Test-Path "C:\Windows\Fonts\$($File.Name)") {
+        if (Test-Path "C:\Windows\Fonts\$($font.Name)") {
             Write-Host "Font $($font.Name) already installed"
         }
         else {
             Write-Host "Installing $($font.Name)"
-            $CopyFlag = [String]::Format("{0:x}", $CopyOptions);
-            $objFolder.CopyHere($font.fullname, $CopyFlag)
+            $CopyFlag = [String]::Format("{0:x}", $CopyOptions)
+            $objFolder.CopyHere($font.FullName, $CopyFlag)
         }
     }
 }
